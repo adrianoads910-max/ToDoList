@@ -4,18 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kanban de Tarefas</title>
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
 </head>
 
-<body>
-   <form id="list-form">
-    <label for="title"> Nova Tarefa</label>
+<body class="bg-gray-100 min-h-screen p-6">
 
-    <input type="text" id="title" required />
-    <button type="submit">Adicionar</button>
-   </form>
+    <!-- Formulário -->
+    <div class="max-w-3xl mx-auto mb-6">
+        <form id="list-form" class="flex gap-2">
+            <input type="text" id="title" required placeholder="Digite uma nova tarefa..."
+                class="flex-1 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
 
-   <ul id="list"></ul>
+            <button type="submit"
+                class="bg-blue-500 hover:bg-blue-600 text-white font-medium px-4 py-2 rounded-lg transition">
+                Adicionar
+            </button>
+        </form>
+    </div>
+
+    <!-- 3 containers de tarefas estilo post-it -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+
+    <div class="bg-white shadow-lg rounded-lg p-4 min-h-[300px]">
+        <h2 class="text-center text-lg font-semibold mb-4 text-gray-700">A Fazer</h2>
+        <ul id="todo-list" class="space-y-3"></ul> <!-- ADICIONADO ID -->
+    </div>
+
+    <div class="bg-white shadow-lg rounded-lg p-4 min-h-[300px]">
+        <h2 class="text-center text-lg font-semibold mb-4 text-gray-700">Em Progresso</h2>
+        <ul id="doing-list" class="space-y-3"></ul> <!-- ADICIONADO ID -->
+    </div>
+
+    <div class="bg-white shadow-lg rounded-lg p-4 min-h-[300px]">
+        <h2 class="text-center text-lg font-semibold mb-4 text-gray-700">Concluído</h2>
+        <ul id="done-list" class="space-y-3"></ul> <!-- ADICIONADO ID -->
+    </div>
+
+</div>
+
+
+    <!-- Estilo de post-it -->
+    <style>
+        .postit {
+            background: #fffbcc; /* amarelo post-it */
+            padding: 10px;
+            border-radius: 6px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 
     <script src="handler.js"></script>
 </body>
