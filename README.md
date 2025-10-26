@@ -114,4 +114,3 @@ Este projeto é **livre para uso e modificação** (MIT License ou similar).
 
 ---
 
-Se quiser, posso adicionar imagens/gifs ao README, melhorar a parte de instalação ou colocar deploy no GitHub Pages. Só me dizer! 🚀
