@@ -31,7 +31,7 @@ Um gerenciador de tarefas estilo **Kanban**, simples e funcional, feito com **HT
 |   [Input + Botão Adicionar Tarefa]       |
 +------------------------------------------+
 |  A Fazer   |  Em Progresso |  Concluído  |
-|   (⬅ ❌ ➡) |   (⬅ ❌ ➡)   |    (⬅ ❌)   |
+| (⬅ ❌ ➡) |  (⬅ ❌ ➡)   |  (⬅ ❌)   |
 +------------------------------------------+
 ```
 
